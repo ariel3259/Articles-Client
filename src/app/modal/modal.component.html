@@ -1,0 +1,10 @@
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h3>{{title}}</h3>
+        <button class="btn btn-close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+        <ng-content></ng-content>
+    </div>
+</ng-template>
+<button class="btn {{btnClass}}" (click)="open(content)">{{label}}</button>

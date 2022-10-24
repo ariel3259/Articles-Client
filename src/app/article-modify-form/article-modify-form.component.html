@@ -1,0 +1,47 @@
+<app-modal btnClass="btn-outline-primary" label="Modificar" title="Modificar articulo">
+    <form (ngSubmit)="modifyArticle()" class="form-control">
+        <div class="mb-2">
+            <label for="name" class="form-label">Nombre</label>
+            <input 
+                type="text" 
+                class="form-control" 
+                name="name" 
+                [(ngModel)]="article.name"
+                [value]="article.name"
+                required>
+        </div>
+        <div class="mb-2">
+            <label for="description" class="form-label">Descripcion</label>
+            <input 
+                type="text" 
+                class="form-control" 
+                name="description" 
+                [(ngModel)]="article.description"
+                [value]="article.description" 
+                required>
+        </div>
+        <div class="mb-2">
+            <label for="price" class="form-label">Precio</label>
+            <input 
+                type="number" 
+                class="form-control" 
+                name="price" 
+                [(ngModel)]="article.price"
+                [value]="article.price"
+                required>
+        </div>
+        <div class="mb-2">
+            <label for="stock" class="form-label">Stock</label>
+            <input 
+                type="number" 
+                class="form-control" 
+                name="stock" 
+                [(ngModel)]="article.stock"
+                [value]="article.stock" 
+                required>
+        </div>
+        <div class="mt-3">
+            <button class="btn btn-primary" type="submit">añadir</button>
+        </div>
+    </form>
+</app-modal>
